@@ -1,0 +1,10 @@
+name             'autoproj'
+maintainer       'Sylvain Joyeux'
+maintainer_email 'bir.sylvain@gmail.com'
+license          'BSD'
+description      'Manage autoproj bootstraps'
+version          '0.1.0'
+
+supports 'ubuntu'
+supports 'linuxmint'
+supports 'debian'
