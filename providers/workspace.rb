@@ -43,9 +43,9 @@ def bootstrap(resource)
     vcs_type = buildconf.delete('type')
     vcs_url  = buildconf.delete('url')
     vcs_options = buildconf.map { |k, v| "'#{k}=#{v}'" }
-    script "autoproj bootstrap" do
+    execute "autoproj bootstrap" do
         environment 'AUTOPROJ_BOOTSTRAP_IGNORE_NONEMPTY_DIR' => '1', 'AUTOPROJ_OSDEPS_MODE' => 'all'
-        code "#{resource.ruby} '#{bootstrap}' '#{vcs_type}' '#{vcs_url}' #{vcs_options.join(" ")}"
+        command "#{resource.ruby} '#{bootstrap}' '#{vcs_type}' '#{vcs_url}' #{vcs_options.join(" ")}"
         cwd resource.dir
         user resource.user
     end
