@@ -9,15 +9,15 @@ attribute :buildconf, kind_of: Hash,
     required: true
 
 # The ruby interpreter
-attribute :ruby, kind_of: String,
+attribute :ruby, kind_of: 'string',
     default: 'ruby'
-attribute :user, kind_of: String,
+attribute :user, kind_of: 'string',
     required: true
-attribute :dir, name_attribute: true, kind_of: String,
+attribute :dir, name_attribute: true, kind_of: 'string',
     required: true
-attribute :cache_dir, kind_of: String,
+attribute :cache_dir, kind_of: 'string',
     required: false
-attribute :update, default: false
-attribute :seed_config, kind_of: String
+attribute :update, default: false, kind_of: 'boolean'
+attribute :seed_config, kind_of: 'string'
 
 attr_accessor :bootstrapped
