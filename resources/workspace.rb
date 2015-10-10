@@ -19,5 +19,6 @@ attribute :cache_dir, kind_of: 'string',
     required: false
 attribute :update, default: false, kind_of: 'boolean'
 attribute :seed_config, kind_of: 'string'
+attribute :rbenv, kind_of: 'boolean', default: false
 
 attr_accessor :bootstrapped
